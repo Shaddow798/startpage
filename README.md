@@ -1,2 +1,2 @@
 # startpage
-startpage
+My Firefox StartPage
