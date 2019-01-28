@@ -1,0 +1,39 @@
+body {
+	font-family: arial;
+	background: #ffff;
+}
+div {
+
+}
+.diva {
+	margin: auto;
+ 	width: 50%;
+	padding-top:20%;
+
+}
+
+.icons {
+	display: inline-block;
+}
+.reddit {
+	 display: inline-block;
+	 margin-right: 10px;
+}
+.youtube {
+	 display: inline-block;
+ 	 margin-right: 10px;
+}
+
+.github{
+	 display: inline-block;
+ 	 margin-right: 10px;
+}
+
+.twitter {
+	 display: inline-block;
+ 	 margin-right: 10px;
+}
+.linustechtips {
+	 display: inline-block;
+ 	 margin-right: 10px;
+}
