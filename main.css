@@ -1,39 +1,17 @@
 body {
+	background: #2e333e;
 	font-family: arial;
-	background: #ffff;
-}
-div {
-
-}
-.diva {
-	margin: auto;
- 	width: 50%;
-	padding-top:20%;
-
+	color: #ffff;
 }
 
-.icons {
-	display: inline-block;
-}
-.reddit {
-	 display: inline-block;
-	 margin-right: 10px;
-}
-.youtube {
-	 display: inline-block;
- 	 margin-right: 10px;
+#content-div {
+	padding-top: 50%;
 }
 
-.github{
-	 display: inline-block;
- 	 margin-right: 10px;
+p {
+	font-size: 125%;
 }
 
-.twitter {
-	 display: inline-block;
- 	 margin-right: 10px;
-}
-.linustechtips {
-	 display: inline-block;
- 	 margin-right: 10px;
+a {
+	color: #ffff;
 }
