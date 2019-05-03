@@ -1,8 +1,6 @@
 body {
-	background: #e7e8eb;
-	#background: #2e333e;
+	background: #2e333e;
 	font-family: arial;
-	color: #ffff;
 }
 
 #content-div {
@@ -10,9 +8,14 @@ body {
 }
 
 p {
-	font-size: 125%;
+	font-size: 75%;
 }
 
 a {
 	color: #ffff;
+}
+
+h1 {
+	color: #ffff;
+	font-size: 100%;
 }
