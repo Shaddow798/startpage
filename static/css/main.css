@@ -2,13 +2,14 @@ body {
 	background: black;
 	font-family: arial;
 	font-size: 20pt;
-}
-
-#content-div {
 	margin: auto;
 	width: 30%;
 }
-
+/*
+#content-div {
+	
+}
+*/
 p {
 	font-size: 75%;
 }
@@ -20,10 +21,11 @@ a {
 h1 {
 	color: #ffff;
 	font-size: 30pt;
+	text-align: center;
 }
 
 input[type=text] {
-	width: 30%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	box-sizing: border-box;
