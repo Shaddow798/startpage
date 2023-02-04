@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-	<title>Start</title>
-</head>
-<body>
-	<div class="content-div">
+{% extends 'base.html' %}
+{% block head%}
+<title>StartPage</title>
+{% endblock %}
 
-			<div class="googlebar">
-				<h1>StartPage</h1>
+{% block body %}
+<div class="content-div">
 
-				<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
-				<input name="sitesearch" type="hidden" value="">
-				<input autocomplete="off" class="form-control search" name="q" placeholder="Search" type="text">
-				
-				</form>
-		<div class="content">
-			<p>
-				<a href="https://www.reddit.com"target="_blank">Reddit</a>
-			</p>
-			<p>
-				<a href="https://www.youtube.com" target="_blank">YouTube</a>
-			</p>
-			<p>
-				<a href="https://www.github.com" target="_blank">GitHub</a>
-			</p>
-			<p>
-				<a href="https://www.twitter.com" target="_blank">Twitter</a>
-			</p>
-			<p>
-				<a href="https://www.archlinux.org" target="_blank">Arch Wiki</a>
-			</p>
-		</div>
+		<div class="googlebar">
+			<h1>StartPage</h1>
+
+			<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+			<input name="sitesearch" type="hidden" value="">
+			<input autocomplete="off" class="form-control search" name="q" placeholder="Search" type="text">
+			
+			</form>
+	<div class="content">
+		<p>
+			<a href="https://www.reddit.com"target="_blank">Reddit</a>
+		</p>
+		<p>
+			<a href="https://www.youtube.com" target="_blank">YouTube</a>
+		</p>
+		<p>
+			<a href="https://www.github.com" target="_blank">GitHub</a>
+		</p>
+		<p>
+			<a href="https://www.twitter.com" target="_blank">Twitter</a>
+		</p>
+		<p>
+			<a href="https://www.archlinux.org" target="_blank">Arch Wiki</a>
+		</p>
 	</div>
-</body>
-</html>
+</div>
+{%endblock%}
