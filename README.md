@@ -10,3 +10,7 @@ At the moment I'm working towards making this far more customiable and have far 
 At the present moment it only has a simple google searchbox and some links.
 
 I want to make the links customiable and I want to add in otherthings like the weather and time.
+
+Heres what it prevously looked like:
+
+![Old website interface](/docs/images/oldstart.png "Old website interface")
