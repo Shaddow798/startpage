@@ -1,0 +1,36 @@
+nav{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-left: 0px;
+    padding-left: 0px;
+    
+}
+
+.nav_link:link {
+    color: white;
+}
+
+.nav_link:visited {
+    color: white;
+  }
+  
+.nav_link:hover {
+    color: white;
+    background-color: red;
+
+  }
+  
+.nav_link:active {
+    color: white;
+  }
+
+
+
+.nav_link {
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+    margin-left: -5px;
+    border-radius: 0px;
+}
