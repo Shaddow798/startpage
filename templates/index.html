@@ -11,29 +11,28 @@
 
 		<form action="https://duckduckgo.com/?q=" class="searchform" method="get" name="searchform" target="_blank">
 		<input name="sitesearch" type="hidden" value="">
-		<input autocomplete="off" class="form-control search" name="q" placeholder="Search" type="text">
+		<input autocomplete="off" class="form-control search" name="q" placeholder="Search With DuckDuckgo." type="text">
 		
 		</form>
 	</div>
 	<div class="content">
 		<div class="object">
-			<p>
-				<a class="object_link" href="https://www.reddit.com"target="_blank">Reddit</a>
-			</p>
+			<a class="object_link" href="https://wiki.archlinux.org" target="_blank">
+				<img class="object_icon" src="{{url_for('static', filename='images/archwiki.png')}}">
+				<p>Arch wiki</p>
+			</a>		
 		</div>
 		<div class="object">
-			<p>
-				<a href="https://www.youtube.com" target="_blank">sample</a>
-			</p>
+			<a class="object_link" href="https://wiki.archlinux.org" target="_blank">
+				<img class="object_icon" src="{{url_for('static', filename='images/github.png')}}">
+				<p>Github</p>
+			</a>
 		</div>
 		<div class="object">
-			<img class="object_icon" src="{{url_for('static', filename='images/github.png')}}">
-			<a class="object_link" href="https://www.github.com" target="_blank">GitHub</a>
-		</div>
-		<div class="object">
-			<p>
-				<a href="https://www.twitter.com" target="_blank">sample</a>
-			</p>
+			<a class="object_link" href="https://wiki.archlinux.org" target="_blank">
+				<img class="object_icon" src="{{url_for('static', filename='images/metservice.png')}}">
+				<p>Weather</p>
+			</a>
 		</div>
 		<a href="https://wiki.archlinux.org" target="_blank">
 		<div class="object">
@@ -41,12 +40,18 @@
 			<p>Arch wiki</p>
 		</div>
 		</a>
+		<a href="https://wiki.archlinux.org" target="_blank">
 		<div class="object">
-			<img class="object_icon" src="{{url_for('static', filename='images/metservice.png')}}">
-
-			<p>
-				<a href="https://www.metservice.com" target="_blank">Metservice</a>
-			</p>
+			<img class="object_icon" src="{{url_for('static', filename='images/archwiki.png')}}">
+			<p>Arch wiki</p>
+		</div>
+		</a>
+		<a href="https://172.16.0.100:8006" target="_blank">
+		<div class="object">
+			<img class="object_icon" src="{{url_for('static', filename='images/proxmox.png')}}">
+			<p>Proxmox</p>
+		</div>
+		</a>
 		</div>		
 	</div>
 </div>

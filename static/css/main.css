@@ -40,14 +40,21 @@ input[type=text] {
 .object {
 	display:inline-block;
 	width: 96px;
-	height:96px;
-	background-color: green;
 	padding: 0px;
 	text-align: center;
-	font-size: 20px;
+	font-size: 30px;
 	margin-right: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 .object_icon {
 	width: 96px;
 	height: 96px;
+	margin: 0;
+	padding: 0;
+}
+object_link {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
 }
