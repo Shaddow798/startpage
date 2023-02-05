@@ -14,7 +14,13 @@ At the present moment it only has a simple google searchbox and some links.
 I want to make the links customiable and I want to add in otherthings like the weather and time.
 
 ---
-## Todo list:
+### Usage
+
+
+
+
+---
+### Todo list:
 
 This list is by no means complete. I want to add more things as i go alone. This is just what ive been working on.
 
