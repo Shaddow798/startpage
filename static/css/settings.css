@@ -1,0 +1,19 @@
+main {
+    width: 60%;
+    margin-left: 20%;
+    flex-grow: 1;
+    padding-left: 10px;
+    background-color: #ececec;
+    border-radius: 10px;
+}
+header {
+    margin-left: 20%;
+    padding-left: 10px;
+}
+
+.text_block{
+    display: inline-block;
+    word-wrap: break-word;
+    vertical-align: bottom;
+    width: 67%;
+}

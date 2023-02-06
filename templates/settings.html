@@ -1,9 +1,31 @@
 {% extends 'base.html' %}
 {% block head%}
 <title>StartPage</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
 {% endblock %}
 
 {% block body%}
-<h1> Settings page</h1>
+<header>
+    <h1> Settings page</h1>
+</header>
+
+<main>
+    <form>
+        <h2>Search Engine</h2>
+        <label for="searchengine">Choose a search engine:</label>
+        <select name="cars" id="cars">
+          <option value="ddg">DuckDuckGO</option>
+          <option value="google">Google</option>
+          <option value="yahoo">Yahoo</option>
+          <option value="bing">Bing</option>
+        </select> 
+
+        <h2>Icons</h2>
+        <label for="icons">How many icons do you want:</label>
+        <input type="number" id="quantity" name="quantity" value="6" min="0" max="24"> 
+
+    </form>
+</main>
+
 
 {% endblock %}

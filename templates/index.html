@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/startpage.css') }}">
+
 <title>StartPage</title>
 {% endblock %}
 
 {% block body %}
-<input type="button" value="Settings">
+<a href="/settings"><input type="button" value="Settings"></a>
 <div class="content-div">
 	<div class="searchbar">
 		<h1>StartPage</h1>
