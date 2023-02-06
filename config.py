@@ -1,4 +1,3 @@
-"""Flask configuration."""
 
 TESTING = True
 DEBUG = True

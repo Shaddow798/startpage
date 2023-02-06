@@ -6,6 +6,16 @@ app.config.from_pyfile('config.py')
 
 
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///icons.db'
+app.app_context()
+db = SQLAlchemy(app)
+
+class Icons(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+
+
+
 @app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template('index.html')
