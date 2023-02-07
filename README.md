@@ -32,12 +32,13 @@ Here are scope of things that I want to complete for this mini project:
 |Duckduckgo search          | ✅ |
 |Basic Links to sites       | ✅ |
 |Basic images               | ✅ |
-|Ablity to change search engine| 🚧|
-|Add a database             | 🚧 |
-|Add settings menu          |🚧|
-|Customiable backgrouds     |🚧|
+|Ablity to change search engine| In progress|
+|Add a database             | ✅ |
+|Add settings menu          |✅|
+|Customiable backgrouds     | In Progress|
 |Basic css to make the site not look like crap | ✅ |
-|settings to change how many links there are |🚧|
+|settings to change how many links there are |need to get working
+|get metservice intergration to work| not done|
 
 
 Heres what it prevously looked like:
