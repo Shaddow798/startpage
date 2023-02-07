@@ -6,31 +6,48 @@
 
 {% block body%}
 <header>
-    <h1> Settings page</h1>
+    <h1>Settings page</h1>
+    <h3>Note Submiting a setting will redictect you to the homepage.</h3>
 </header>
 
 <main>
     <form>
         <h2>Search Engine</h2>
         <label for="searchengine">Choose a search engine:</label>
-        <select name="cars" id="cars">
-          <option value="ddg">DuckDuckGO</option>
+        <select name="searchengine" id="searchengine">
+          <option value="ddg">DuckDuckGo</option>
           <option value="google">Google</option>
           <option value="yahoo">Yahoo</option>
           <option value="bing">Bing</option>
         </select> 
-
+        <input type="submit" value="Apply">
+    </form>
+    <form>
         <h2>Icons</h2>
+        <!--
         <label for="icons">How many icons do you want:</label>
         <input type="number" id="quantity" name="quantity" value="6" min="0" max="24"> 
+        <input type="submit" value="Apply">
+        -->
+        <p>Create a link</p>
+        <label for="content">Title</label>
+        <input type="text" name="content" id="content" >
+        <br>
+        <br>
+        <label for="link_content">Url</label>
+        <input type="text" name="link_content" id="link_content" >
+        <br>
+        <input type="submit" value="Update">
+        
+    </form>
 
+    <form>
         <h2>Apperance</h2>
         <label for="background_type">Background Type:</label>
         <select name="background_type">
             <option value="solid">Solid Colour</option>
             <option value="background">Background</option>
         </select>
-
     </form>
 </main>
 
