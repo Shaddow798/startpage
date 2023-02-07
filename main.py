@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -7,8 +8,8 @@ app.config.from_pyfile('config.py')
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///icons.db'
-app.app_context()
-db = SQLAlchemy(app)
+app.app_context():
+    db = SQLAlchemy(app)
 
 class Icons(db.Model):
     id = db.Column(db.Integer, primary_key=True)
