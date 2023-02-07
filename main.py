@@ -14,8 +14,9 @@ db = SQLAlchemy(app)
 class Icons(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # Content is equal to to name of the link
-    content = db.Column(db.String(200), nullable=False)
+    content = db.Column(db.String(100), nullable=False)
     content_link = db.Column(db.String(200), nullable=False)
+    content_order = db.Column(db.Integer, nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     
     def __repr__(self):
