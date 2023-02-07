@@ -2,15 +2,15 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+# define basic things such as the config file
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
-
-
-
+# Define where the database is.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///icons.db'
 app.app_context()
 db = SQLAlchemy(app)
 
+# Setup what each thing is in the database
 class Icons(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # Content is equal to to name of the link
@@ -24,11 +24,12 @@ class Icons(db.Model):
 
 
 
-
+# Routes for every page and what the function is
 @app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template('index.html')
 
+# setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
 def settings():
     if request.method == 'POST':
@@ -45,7 +46,7 @@ def settings():
         pins = Icons.query.order_by(Icons.date_created).all()
         return render_template('settings.html', pins=pins)
         
-
+# run the program
 
 if __name__ == "__main__":
     app.run()
