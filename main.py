@@ -19,7 +19,7 @@ class Icons(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     
     def __repr__(self):
-        return '<Task %r>' % self.id
+        return '<Pins %r>' % self.id
 
 
 
@@ -44,7 +44,6 @@ def settings():
         pins = Icons.query.order_by(Icons.date_created).all()
         return render_template('settings.html', pins=pins)
         
-    return render_template('settings.html')
 
 
 if __name__ == "__main__":
