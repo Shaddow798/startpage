@@ -34,8 +34,9 @@ def settings():
     if request.method == 'POST':
         pin_content = request.form['content']
         pin_link_content = request.form['link_content']
+        new_pin = Icons(content=pin_content)
         try:
-            db.session.add(pin_content, pin_link_content)
+            db.session.add(new_pin)
             db.session.commit()
             return redirect('/settings')
         except:
