@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -31,6 +31,19 @@ def index():
 
 @app.route('/settings', methods=['POST', 'GET'])
 def settings():
+    if request.method == 'POST':
+        pin_content = request.form['content']
+        pin_link_content = request.form['link_content']
+        try:
+            db.session.add(pin_content, pin_link_content)
+            db.session.commit()
+            return redirect('/settings')
+        except:
+            return 'Something went wrong'
+    else:
+        pins = Icons.query.order_by(Icons.date_created).all()
+        return render_template('settings.html', pins=pins)
+        
     return render_template('settings.html')
 
 
