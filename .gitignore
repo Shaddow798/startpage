@@ -2,6 +2,6 @@ include/
 bin/
 lib/
 /pyvenv.cfg
-
+.vscode/
 
 __pycache__/main.cpython-311.pyc
