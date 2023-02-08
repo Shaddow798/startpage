@@ -28,7 +28,9 @@ class Icons(db.Model):
 # Routes for every page and what the function is
 @app.route('/', methods=['POST', 'GET'])
 def index():
+    #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
+    #return render_template('index.html')
 
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
@@ -44,8 +46,7 @@ def settings():
         except:
             return 'Something went wrong'
     else:
-        pins = Icons.query.order_by(Icons.date_created).all()
-        return render_template('settings.html', pins=pins)
+        return render_template('settings.html')
         
 # run the program
 

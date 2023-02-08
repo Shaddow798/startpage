@@ -24,11 +24,11 @@
     </form>
     <form  action="/settings" method="POST">
         <h2>Icons</h2>
-        <!--
-        <label for="icons">How many icons do you want:</label>
+        
+        <label for="icons">How many pins do you want:</label>
         <input type="number" id="quantity" name="quantity" value="6" min="0" max="24"> 
         <input type="submit" value="Apply">
-        -->
+        
         <p>Create a link</p>
         <label for="content">Title</label>
         <input type="text" name="content" id="content" >
@@ -36,6 +36,9 @@
         <br>
         <label for="link_content">URL</label>
         <input type="text" name="link_content" id="link_content" >
+        <br>
+        <label for="order">What position</label>
+        <input type="number" id="order" name="order" value="1" min="0" max="24">
         <br>
         <input type="submit" value="Update">
         
@@ -49,6 +52,13 @@
             <option value="background">Background</option>
         </select>
     </form>
+
+
+    <br>
+    <a href="/">
+        <button>Finish</button>
+    </a>
+
 </main>
 
 
