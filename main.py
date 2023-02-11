@@ -23,8 +23,6 @@ class Icons(db.Model):
         return '<Pins %r>' % self.id
 
 
-
-
 # Routes for every page and what the function is
 @app.route('/', methods=['POST', 'GET'])
 def index():
