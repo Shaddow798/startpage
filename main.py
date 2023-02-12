@@ -51,10 +51,15 @@ def settings():
     else:
         return render_template('settings.html')
 
-# Hanndle errors
+#Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
-def not_found(e):
-  return render_template('errorpage.html'), 404
+def not_found_error(error):
+    return render_template('404.html'),404
+ 
+#Handling error 500 and displaying relevant web page
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('500.html'),500
 
 
 # run the program
