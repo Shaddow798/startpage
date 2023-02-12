@@ -51,6 +51,11 @@ def settings():
     else:
         return render_template('settings.html')
 
+# Load Browser Favorite Icon
+@app.route('/favicon.ico')
+def favicon():
+    return url_for('static', filename='images/favicon.ico')
+
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
 def not_found_error(error):
