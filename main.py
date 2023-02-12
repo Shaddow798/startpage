@@ -50,7 +50,13 @@ def settings():
             return 'Something went wrong'
     else:
         return render_template('settings.html')
-        
+
+# Hanndle errors
+@app.errorhandler(404)
+def not_found(e):
+  return render_template('errorpage.html'), 404
+
+
 # run the program
 
 if __name__ == "__main__":
