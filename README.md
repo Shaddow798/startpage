@@ -35,6 +35,7 @@ Here are scope of things that I want to complete for this mini project:
 |Ablity to change search engine| In progress|
 |Add a database             | ✅ |
 |Add settings menu          |✅|
+|Get the favicon working             | ✅ |
 |Customiable backgrouds     | In Progress|
 |Basic css to make the site not look like crap | ✅ |
 |settings to change how many links there are |need to get working
