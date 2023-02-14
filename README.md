@@ -40,8 +40,3 @@ Here are scope of things that I want to complete for this mini project:
 |Basic css to make the site not look like crap | ✅ |
 |settings to change how many links there are |need to get working
 |get metservice intergration to work| not done|
-
-
-Heres what it prevously looked like:
-
-![Old website interface](/docs/images/oldstart.png "Old website interface")
