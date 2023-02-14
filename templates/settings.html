@@ -2,6 +2,8 @@
 {% block head%}
 <title>StartPage</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
+
+
 {% endblock %}
 
 {% block body%}
@@ -77,5 +79,6 @@
 
 </main>
 
+<script src="{{url_for('static', filename='settings.js')}}"></script>
 
 {% endblock %}
