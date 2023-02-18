@@ -1,8 +1,9 @@
 alert("Hello")
 
 // start writing the scirpt to change the search engine
+localStorage.setItem("search", "google");
+var search = localStorage.getItem("search");
 
-var search = "google"
 if (search == "duckduckgo") {
     pass
 }
