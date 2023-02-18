@@ -16,25 +16,13 @@
 		<input autocomplete="off" class="form-control search" name="q" placeholder="Search With DuckDuckgo." type="text">
 		</form>
 	</div>
-	<!--Table for the pins-->
-	<!--Removed the old hard coded links-->
-	<!--This will be replaced with a table-->
-
-	
+	<!--This is the broken datasbase lol-->
 	<table>
 		<tr>
 			{% for pin in pins %}
 			<td>{{ pin.content }}</td>
 			<td>{{ pin.date_created.date() }}</td>
 			{% endfor %}
-		</tr>
-		<tr>
-			<td>TEST TEXT</td>
-			<td>TEST TEXT</td>
-			<td>TEST TEXT</td>
-			<td>TEST TEXT</td>
-			<td>TEST TEXT</td>
-			<td>TEST TEXT</td>
 		</tr>
 	</table>
 

@@ -2,9 +2,13 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import os
+
+
 # define basic things such as the config file
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
+
+
 # Define where the database is.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///icons.db'
 app.app_context()
@@ -18,13 +22,16 @@ class Icons(db.Model):
     content_link = db.Column(db.String(200), nullable=False)
     content_order = db.Column(db.Integer, nullable=True)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
-    
+
+
     def __repr__(self):
         return '<Pins %r>' % self.id
 
 
 # Routes for every page and what the function is
 @app.route('/', methods=['POST', 'GET'])
+
+
 def index():
     #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
@@ -32,6 +39,8 @@ def index():
 
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
+
+
 def settings():
     if request.method == 'POST':
         pin_content = request.form['content']
@@ -53,16 +62,22 @@ def settings():
 
 # Load Browser Favorite Icon
 @app.route('/favicon.ico')
+
+
 def favicon():
-    return url_for('static', filename='images/favicon.ico')
+    return url_for('static',filename='images/favicon.ico')
 
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
+
+
 def not_found_error(error):
     return render_template('404.html'),404
  
 #Handling error 500 and displaying relevant web page
 @app.errorhandler(500)
+
+
 def internal_error(error):
     return render_template('500.html'),500
 

@@ -2,6 +2,7 @@
 This is a custom website that I use as my browser homepage.
 
 This is currently being rewriten to use flask.
+Its made in html, css, javascript and python
 
 This project is really stupid as it would make far more sense to use javascript instead of running with flask and also making it so more then one person can have bookmarks at a time on a server.
 
@@ -16,6 +17,11 @@ I want to make the links customiable and I want to add in otherthings like the w
 ---
 ### Usage
 
+This is a program that requires you to spinup your own hosting for your browser homepage, because who wouldn't want to do that.
+
+I would recomend running this on your localmachine with a firewal blocking any access from other devices, or on some hosting provider, as I don't think this is very secure
+
+or you know you could just not use it.
 
 
 
