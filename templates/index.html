@@ -11,7 +11,7 @@
 	<div class="searchbar">
 		<h1>StartPage</h1>
 		<!--this is the searchbar-->
-		<form action="https://duckduckgo.com/?q=" class="searchform" method="get" name="searchform" target="_blank">
+		<form id="searchbar" action="https://duckduckgo.com/?q=" class="searchform" method="get" name="searchform" target="_blank">
 		<input name="sitesearch" type="hidden" value="">
 		<input autocomplete="off" class="form-control search" name="q" placeholder="Search With DuckDuckgo." type="text">
 		</form>
@@ -39,4 +39,7 @@
 	</table>
 
 </div>
+
+<script src="{{url_for('static', filename='settings.js')}}"></script>
+
 {%endblock%}
