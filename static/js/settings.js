@@ -6,5 +6,9 @@ function setsearch() {
 }
 
 
+function backgroundcolor() {
+    color = document.getElementById("")
+}
+
 
 // var search = localStorage.getItem("search");
