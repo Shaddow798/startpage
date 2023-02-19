@@ -44,6 +44,7 @@ Here are scope of things that I want to complete for this mini project:
 |Use javascript localstorage for some settings | ✅ |
 |Get the favicon working             | ✅ |
 |Customiable backgrouds     | In Progress|
+|Customiable background color| ✅ |
 |Basic css to make the site not look like crap | ✅ |
 |settings to change how many links there are |need to get working
 |get metservice intergration to work| not done|
