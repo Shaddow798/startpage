@@ -38,10 +38,10 @@ Here are scope of things that I want to complete for this mini project:
 |Duckduckgo search          | ✅ |
 |Basic Links to sites       | ✅ |
 |Basic images               | ✅ |
-|Ablity to change search engine|   |
+|Ablity to change search engine|  ✅ |
 |Add a database             | ✅ |
 |Add settings menu          |✅|
-|Use javascript localstorage for some settings |
+|Use javascript localstorage for some settings | ✅ |
 |Get the favicon working             | ✅ |
 |Customiable backgrouds     | In Progress|
 |Basic css to make the site not look like crap | ✅ |
