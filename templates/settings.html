@@ -13,18 +13,18 @@
 </header>
 
 <main>
-    <form>
-        <h2>Search Engine</h2>
-        <label for="searchengine">Choose a search engine:</label>
-        <select name="searchengine" id="searchengine">
-          <option value="ddg">DuckDuckGo</option>
-          <option value="google">Google</option>
-          <option value="yahoo">Yahoo</option>
-          <option value="bing">Bing</option>
-        </select>
-        <br>
-        <input type="submit" value="Apply">
-    </form>
+    
+    <h2>Search Engine</h2>
+    <label for="searchengine">Choose a search engine:</label>
+    <select name="searchengine" id="searchengine">
+        <option value="duckduckgo">DuckDuckGo</option>
+        <option value="google">Google</option>
+        <option value="yahoo">Yahoo</option>
+        <option value="bing">Bing</option>
+    </select>
+    <br>
+    <button onclick="setsearch()">Apply</button>
+    
     <form  action="/settings" method="POST">
         <h2>Icons</h2>
         
@@ -79,6 +79,6 @@
 
 </main>
 
-<script src="{{url_for('static', filename='settings.js')}}"></script>
+<script src="{{url_for('static', filename='js/settings.js')}}"></script>
 
 {% endblock %}
