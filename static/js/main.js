@@ -1,7 +1,7 @@
 // This script controls the searchbox on the website.
 
 //var backgroundcolor = localStorage.getItem("")
-
+var backgroundcolor = '#4443';
 //document.getElementsByClassName("content-div").style = 'background: red;'
 document.getElementsByTagName('body')[0].style = 'background: #333;'; 
 
