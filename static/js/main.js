@@ -1,6 +1,6 @@
-alert("Hello")
+// This script controls the searchbox on the website.
 
-// start writing the scirpt to change the search engine
+//Manual overide for setting the search engine
 //localStorage.setItem("search", "google");
 var search = localStorage.getItem("search");
 
