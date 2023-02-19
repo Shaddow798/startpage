@@ -36,9 +36,10 @@ Here are scope of things that I want to complete for this mini project:
 | Description               | Complete |
 |---|---|
 |Duckduckgo search          | ✅ |
-|Basic Links to sites       | ✅ |
+|Basic Links to sites       | Removed and now trying to get db working |
 |Basic images               | ✅ |
 |Ablity to change search engine|  ✅ |
+|Abilty to allow people to add there own custom searchengines| |
 |Add a database             | ✅ |
 |Add settings menu          |✅|
 |Use javascript localstorage for some settings | ✅ |
@@ -48,3 +49,4 @@ Here are scope of things that I want to complete for this mini project:
 |Basic css to make the site not look like crap | ✅ |
 |settings to change how many links there are |need to get working
 |get metservice intergration to work| not done|
+|

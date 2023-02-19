@@ -39,8 +39,6 @@ def index():
 
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
-
-
 def settings():
     if request.method == 'POST':
         pin_content = request.form['content']
@@ -56,16 +54,15 @@ def settings():
             db.session.commit()
             return redirect('/settings')
         except:
-            return 'Something went wrong'
+            return 'Something went wrong adding your item to the database'
     else:
         return render_template('settings.html')
 
+# DOES THIS EVEN MATTER
 # Load Browser Favorite Icon
-@app.route('/favicon.ico')
-
-
-def favicon():
-    return url_for('static',filename='images/favicon.ico')
+#@app.route('/favicon.ico')
+#def favicon():
+#    return url_for('static',filename='images/favicon.ico')
 
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
