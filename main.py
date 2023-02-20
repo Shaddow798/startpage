@@ -1,12 +1,16 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.utils import secure_filename
 from datetime import datetime
 import os
 
+UPLOAD_FOLDER = 'images/'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 # define basic things such as the config file
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 # Define where the database is.
@@ -28,6 +32,11 @@ class Icons(db.Model):
         return '<Pins %r>' % self.id
 
 # Trying to get this to work but its being a bitch.
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 
 # Routes for every page and what the function is
@@ -58,6 +67,36 @@ def settings():
             return 'Something went wrong adding your item to the database'
     else:
         return render_template('settings.html')
+
+# File uploader test
+
+@app.route('/fileuploader', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # If the user does not select a file, the browser submits an
+        # empty file without a filename.
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('download_file', name=filename))
+    return '''
+    <!doctype html>
+    <title>Upload new File</title>
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    '''
+
 
 # DOES THIS EVEN MATTER
 # Load Browser Favorite Icon
