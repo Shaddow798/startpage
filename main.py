@@ -27,17 +27,17 @@ class Icons(db.Model):
     def __repr__(self):
         return '<Pins %r>' % self.id
 
+# Trying to get this to work but its being a bitch.
+
 
 # Routes for every page and what the function is
-@app.route('/', methods=['POST', 'GET'])
-
-
+@app.route('/', methods=['GET'])
 def index():
     #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
 
     #return render_template('index.html')
-
+# WHY THE FUCK DOES THIS NOT WORK
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
 def settings():

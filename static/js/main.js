@@ -1,14 +1,14 @@
 // This script controls the searchbox on the website.
 
 //var backgroundcolor = localStorage.getItem("")
-var backgroundcolor = localStorage.getItem("colour")
-//document.getElementsByClassName("content-div").style = 'background: red;'
-document.getElementsByTagName('body')[0].style = 'background: ${backgroundcolour};'; 
-
+//var backgroundcolor = localStorage.getItem("colour");
+//console.log(backgroundcolor);
+document.getElementsByTagName('body')[0].style = 'background: #222;'; 
+//const body = document.querySelector("body");
+//body.style.background = "#44499";
 //Manual overide for setting the search engine
 //localStorage.setItem("search", "google");
 var search = localStorage.getItem("search");
-document.getElementById("searchtext").placeholder = "d"
 
 if (search == "duckduckgo") {
     document.getElementById("searchbar").action = "https://duckduckgo.com/?q="; //Will set it
