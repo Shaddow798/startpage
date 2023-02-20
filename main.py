@@ -35,6 +35,7 @@ class Icons(db.Model):
 def index():
     #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
+
     #return render_template('index.html')
 
 # setuo the settings 
@@ -80,6 +81,8 @@ def internal_error(error):
 
 
 # run the program
+
+# All this does it run it aslong as its not being imported
 
 if __name__ == "__main__":
     app.run()
