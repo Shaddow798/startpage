@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block body %}
+{%if setbackground == True%}
+	background({{background}})
+
+{%endif%}
+
+
 <a href="/settings"><input type="button" value="Settings"></a>
 <div class="content-div">
 	<div class="searchbar">

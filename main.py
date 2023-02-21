@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from datetime import datetime
 import os
 
-UPLOAD_FOLDER = 'images/'
+UPLOAD_FOLDER = 'static/images/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 # define basic things such as the config file
@@ -44,8 +44,6 @@ def allowed_file(filename):
 def index():
     #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
-
-    #return render_template('index.html')
 # WHY THE FUCK DOES THIS NOT WORK
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
@@ -86,7 +84,9 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('download_file', name=filename))
+            #return redirect(url_for('download_file', name=filename))
+            setbackground = "False"
+            return redirect('/', background=filename)
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -96,9 +96,9 @@ def upload_file():
       <input type=submit value=Upload>
     </form>
     '''
-@app.route('/uploads/<name>')
-def download_file(name):
-    return send_from_directory(app.config["UPLOAD_FOLDER"], name)
+#@app.route('/uploads/<name>')
+#def download_file(name):
+#    return send_from_directory(app.config["UPLOAD_FOLDER"], name)
 
 @app.route('/about')
 def about():

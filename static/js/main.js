@@ -3,7 +3,12 @@
 //var backgroundcolor = localStorage.getItem("")
 //var backgroundcolor = localStorage.getItem("colour");
 //console.log(backgroundcolor);
-document.getElementsByTagName('body')[0].style = 'background: #222;'; 
+
+
+//document.getElementsByTagName('body')[0].style = 'background: #222;'; 
+
+document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/{{background}}') }}'
+
 //const body = document.querySelector("body");
 //body.style.background = "#44499";
 //Manual overide for setting the search engine
