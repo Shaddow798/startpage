@@ -100,6 +100,9 @@ def upload_file():
 def download_file(name):
     return send_from_directory(app.config["UPLOAD_FOLDER"], name)
 
+@app.route('/about')
+def about():
+    return render_template(about.html)
 
 # DOES THIS EVEN MATTER
 # Load Browser Favorite Icon
