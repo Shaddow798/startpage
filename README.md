@@ -35,7 +35,7 @@ Here are scope of things that I want to complete for this mini project:
 
 | Description               | Complete |
 |---|---|
-|Duckduckgo search          | ✅ |
+|Search          | ✅ |
 |Basic Links to sites       | Removed and now trying to get db working |
 |Basic images               | ✅ |
 |Ablity to change search engine|  ✅ |
@@ -49,4 +49,4 @@ Here are scope of things that I want to complete for this mini project:
 |Basic css to make the site not look like crap | ✅ |
 |settings to change how many links there are |need to get working
 |get metservice intergration to work| not done|
-|
+|Some other crap | This project is the defention of scope creep|
