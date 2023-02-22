@@ -101,6 +101,9 @@ def upload_file():
       <input type=submit value=Upload>
     </form>
     '''
+
+#This allows fot the file uploader to open the file after being uploadsed
+
 #@app.route('/uploads/<name>')
 #def download_file(name):
 #    return send_from_directory(app.config["UPLOAD_FOLDER"], name)
@@ -115,11 +118,13 @@ def about():
 #def favicon():
 #    return url_for('static',filename='images/favicon.ico')
 
+
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error.html', error=404)
  
+
 #Handling error 500 and displaying relevant web page
 @app.errorhandler(500)
 def internal_error(error):
