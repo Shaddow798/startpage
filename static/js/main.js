@@ -5,9 +5,9 @@
 //console.log(backgroundcolor);
 
 
-//document.getElementsByTagName('body')[0].style = 'background: #222;'; 
+document.getElementsByTagName('body')[0].style = 'background: #222;'; 
 
-document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/{{background}}') }}'
+//document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/{{background}}') }}'
 
 //const body = document.querySelector("body");
 //body.style.background = "#44499";
