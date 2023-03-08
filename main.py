@@ -24,6 +24,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///icons.db'
 app.app_context()
 db = SQLAlchemy(app)
 
+
 # Setup what each thing is in the database
 class Icons(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -39,10 +40,10 @@ class Icons(db.Model):
 
 # Trying to get this to work but its being a bitch.
 
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 
 
 # Routes for every page and what the function is
@@ -50,6 +51,8 @@ def allowed_file(filename):
 def index():
     #pins = Icons.query.order_by(Icons.date_created).all()
     return render_template('index.html')
+
+
 # WHY THE FUCK DOES THIS NOT WORK
 # setuo the settings 
 @app.route('/settings', methods=['POST', 'GET'])
@@ -102,11 +105,12 @@ def upload_file():
     </form>
     '''
 
-#This allows fot the file uploader to open the file after being uploadsed
+# This allows fot the file uploader to open the file after being uploadsed
 
 #@app.route('/uploads/<name>')
 #def download_file(name):
 #    return send_from_directory(app.config["UPLOAD_FOLDER"], name)
+
 
 @app.route('/about')
 def about():
@@ -119,13 +123,13 @@ def about():
 #    return url_for('static',filename='images/favicon.ico')
 
 
-#Handling error 404 and displaying relevant web page
+# Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error.html', error=404)
  
 
-#Handling error 500 and displaying relevant web page
+# Handling error 500 and displaying relevant web page
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('error.html', error=500)
