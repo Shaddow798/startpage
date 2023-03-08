@@ -116,12 +116,6 @@ def upload_file():
 def about():
     return render_template(about.html)
 
-# DOES THIS EVEN MATTER
-# Load Browser Favorite Icon
-#@app.route('/favicon.ico')
-#def favicon():
-#    return url_for('static',filename='images/favicon.ico')
-
 
 # Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
