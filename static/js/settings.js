@@ -4,8 +4,6 @@ function setsearch() {
     localStorage.setItem("search", searchvalue);
     alert("Your setting has been applied sucsesfully")
 }
-
-
 function backgroundcolor() {
     color = document.getElementById("")
 }
