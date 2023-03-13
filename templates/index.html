@@ -22,8 +22,9 @@
 	</div>
     {% for item in results %}
     <h3>
-        <p>{{ item[0] }}</p>
+        <p>{{ item[1] }}</p>
     </h3>
+    {% endfor %}
 </div>
 
 <script src="{{url_for('static', filename='js/main.js')}}"></script>

@@ -4,8 +4,6 @@ from datetime import datetime
 import sqlite3
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db_dir = (BASE_DIR + '\\icons.db')
 
 
 UPLOAD_FOLDER = 'static/images/'
@@ -26,7 +24,9 @@ def allowed_file(filename):
 # Routes for every page and what the function is
 @app.route('/')
 def index():
-    conn = sqlite3.connect(db_dir)
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(BASE_DIR, "icons.db")
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     cur.execute('SELECT * FROM Icon')
     results = cur.fetchall()
