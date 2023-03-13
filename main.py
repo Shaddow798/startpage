@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-conn = sqlite3.connect('icons.db')
+conn = sqlite3.connect("/Users/sam/development/icons.db")
 cur = conn.cursor()
 
 
@@ -24,9 +24,11 @@ def allowed_file(filename):
 
 
 # Routes for every page and what the function is
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
-    return render_template('index.html')
+    cur.execute('SELECT * FROM Icon')
+    results = cur.fetchall()
+    return render_template('index.html', results=results)
 
 
 # WHY THE FUCK DOES THIS NOT WORK
