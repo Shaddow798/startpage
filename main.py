@@ -14,9 +14,6 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-conn = sqlite3.connect("/Users/sam/development/icons.db")
-cur = conn.cursor()
-
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -26,6 +23,8 @@ def allowed_file(filename):
 # Routes for every page and what the function is
 @app.route('/')
 def index():
+    conn = sqlite3.connect("/Users/sam/development/icons.db")
+    cur = conn.cursor()
     cur.execute('SELECT * FROM Icon')
     results = cur.fetchall()
     return render_template('index.html', results=results)
