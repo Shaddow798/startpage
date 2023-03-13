@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 from datetime import datetime
 import sqlite3
 import os
-
+import uuid
 
 
 UPLOAD_FOLDER = 'static/images/'
