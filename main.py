@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect, send_from_directory
 from werkzeug.utils import secure_filename
 from datetime import datetime
+import sqlite3
 import os
 
 
@@ -12,6 +13,9 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+conn = sqlite3.connect('icons.db')
+cur = conn.cursor()
 
 
 def allowed_file(filename):
