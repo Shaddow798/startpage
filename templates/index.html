@@ -21,6 +21,7 @@
 		</form>
 	</div>
     {% for item in results %}
+    <div class="object">
         <div class="object_icon">
             <a href="{{ item[2] }}">
                 <img src="{{item[4]}}" width="90px">
@@ -28,9 +29,10 @@
                 <p>{{ item[1] }}</p>
             </a>
         </div>
-
-
+    </div>
     {% endfor %}
+
+
 </div>
 
 <script src="{{url_for('static', filename='js/main.js')}}"></script>
