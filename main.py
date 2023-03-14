@@ -35,7 +35,7 @@ def index():
 
 # WHY THE FUCK DOES THIS NOT WORK
 # setuo the settings 
-@app.route('/settings', methods=['POST', 'GET'])
+@app.route('/settings')
 def settings():
     return render_template('settings.html')
 
