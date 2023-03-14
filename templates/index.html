@@ -21,9 +21,14 @@
 		</form>
 	</div>
     {% for item in results %}
-        <img src="{{item[4]}}" width="90px">
+        <div class="object_icon">
+            <a href="{{ item[2] }}">
+                <img src="{{item[4]}}" width="90px">
 
-        <p>{{ item[1] }}</p>
+                <p>{{ item[1] }}</p>
+            </a>
+        </div>
+
 
     {% endfor %}
 </div>
