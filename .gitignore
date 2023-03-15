@@ -8,3 +8,4 @@ __pycache__/main.cpython-311.pyc
 .DS_Store
 .DS_Store
 .idea/
+config.py
