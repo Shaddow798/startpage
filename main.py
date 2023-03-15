@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect, send_from_directory
+from flask import Flask, render_template, url_for, request, redirect, send_from_directory, flash
 from werkzeug.utils import secure_filename
 from datetime import datetime
 import sqlite3
@@ -9,9 +9,9 @@ import uuid
 UPLOAD_FOLDER = 'static/images/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
-
 # define basic things such as the config file
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your secret key'
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -35,7 +35,7 @@ def index():
 
 # WHY THE FUCK DOES THIS NOT WORK
 # setuo the settings 
-@app.route('/settings')
+@app.route('/settings', methods=('GET', 'POST'))
 def settings():
     return render_template('settings.html')
 
