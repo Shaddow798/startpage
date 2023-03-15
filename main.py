@@ -1,4 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect, send_from_directory, flash
+import validators
+from validators import ValidationFailure
+
 from werkzeug.utils import secure_filename
 from datetime import datetime
 import sqlite3
@@ -15,11 +18,22 @@ app.config['SECRET_KEY'] = config.secret_key
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
+def is_string_an_url(url_string: str) -> bool:
+    result = validators.url(url_string)
+
+    if isinstance(result, ValidationFailure):
+        return False
+
+    return result
+
+
 def get_db_connection():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     db_path = os.path.join(BASE_DIR, "icons.db")
     conn = sqlite3.connect(db_path)
     return conn
+
 
 def allowed_file(filename):
     return '.' in filename and \
