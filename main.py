@@ -1,12 +1,10 @@
 from flask import Flask, render_template, url_for, request, redirect, send_from_directory, flash
 import validators
 from validators import ValidationFailure
-
-from werkzeug.utils import secure_filename
-from datetime import datetime
+# from werkzeug.utils import secure_filename
+# from datetime import datetime
 import sqlite3
 import os
-import uuid
 import config
 
 UPLOAD_FOLDER = 'static/images/'
