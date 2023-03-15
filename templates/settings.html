@@ -25,7 +25,7 @@
     <br>
     <button onclick="setsearch()">Apply</button>
     
-    <form  action="/settings" method="POST">
+    <form action="/settings" method="POST">
         <h2>Icons</h2>
         <!--
         <label for="icons">How many pins do you want:</label>
@@ -34,15 +34,15 @@
         -->
         <p>Create a link</p>
         <label for="content">Title</label>
-        <input type="text" name="content" id="content" >
+        <input type="text" name="content" id="content" value="{{ request.form[1] }}">
         <br>
         <br>
         <label for="link_content">URL</label>
-        <input type="text" name="link_content" id="link_content" >
+        <input type="text" name="link_content" id="link_content" value="{{ request.form[2] }}">
         <br>
         <br>
         <label for="order">What position</label>
-        <input type="number" id="order" name="order" value="1" min="0" max="24">
+        <input type="number" id="order" name="order" value="1" min="0" max="24" value="{{ request.form[3] }}">
         <br>
         <input type="submit" value="Apply">
         

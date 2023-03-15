@@ -15,6 +15,11 @@ app.config['SECRET_KEY'] = 'your secret key'
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+def get_db_connection():
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(BASE_DIR, "icons.db")
+    conn = sqlite3.connect(db_path)
+    return conn
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -24,9 +29,7 @@ def allowed_file(filename):
 # Routes for every page and what the function is
 @app.route('/')
 def index():
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    db_path = os.path.join(BASE_DIR, "icons.db")
-    conn = sqlite3.connect(db_path)
+    conn = get_db_connection()
     cur = conn.cursor()
     cur.execute('SELECT * FROM Icon')
     results = cur.fetchall()
@@ -37,6 +40,21 @@ def index():
 # setuo the settings 
 @app.route('/settings', methods=('GET', 'POST'))
 def settings():
+    if request.method == 'POST':
+        title = request.form[1]
+        url = request.form[2]
+
+        if not title:
+            flash('Title is required!')
+        elif not url:
+            flash('Content is required!')
+        else:
+            conn = get_db_connection()
+            conn.execute('INSERT INTO posts (1, 2) VALUES (?, ?)',
+                         (title, url))
+            conn.commit()
+            conn.close()
+            return redirect(url_for('index'))
     return render_template('settings.html')
 
 
