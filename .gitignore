@@ -4,8 +4,7 @@ lib/
 /pyvenv.cfg
 .vscode/
 .DS_Store
-__pycache__/main.cpython-311.pyc
-.DS_Store
+__pycache__/
 .DS_Store
 .idea/
 config.py
