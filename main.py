@@ -12,7 +12,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 # define basic things such as the config file
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config.secret_key
+# app.config['SECRET_KEY'] = config.secret_key
 app.config.from_pyfile('config.py')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
