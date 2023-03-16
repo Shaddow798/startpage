@@ -2,6 +2,8 @@
 {% block head%}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/startpage.css') }}">
 <title>StartPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
 
 {% block body %}
@@ -11,7 +13,11 @@
 {%endif%}
 
 
-<a href="/settings"><input type="button" value="Settings"></a>
+<!--<a href="/settings"><input type="button" value="Settings"></a>-->
+<a href="/settings" class="settings-icon"><i class="fa fa-gear"></i></a>
+
+
+
 <div class="content-div">
 	<div class="searchbar">
 		<h1>StartPage</h1>

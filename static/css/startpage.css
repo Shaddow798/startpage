@@ -5,6 +5,7 @@ body {
 }
 
 .content-div {
+	padding-top: 240px;
 	font-family: arial;
 	font-size: 20pt;
 	margin: auto;
@@ -59,4 +60,16 @@ object_link {
 	font-size: 30px;
 	margin: 0;
 	padding: 0;
+}
+
+.settings-icon {
+    font-size: 36px;
+    float: right;
+    padding: 15px
+}
+
+.fa-gear {
+    font-size: 36px;
+    float: right;
+    padding: 15px
 }
