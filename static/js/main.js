@@ -4,8 +4,9 @@
 //var backgroundcolor = localStorage.getItem("colour");
 //console.log(backgroundcolor);
 
-
-document.getElementsByTagName('body')[0].style = 'background: #222;'; 
+console.log(localStorage.getItem("colour"))
+backgroundcolour = localStorage.getItem("colour")
+document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
 
 //document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/{{background}}') }}'
 
