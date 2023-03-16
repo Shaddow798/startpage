@@ -1,17 +1,11 @@
-// This script controls the searchbox on the website.
+// This script controls the startpage on the site.
 
-//var backgroundcolor = localStorage.getItem("")
-//var backgroundcolor = localStorage.getItem("colour");
-//console.log(backgroundcolor);
+// Set the background colour
+// backgroundcolour = localStorage.getItem("colour")
+// document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
 
-console.log(localStorage.getItem("colour"))
-backgroundcolour = localStorage.getItem("colour")
-document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
+document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/proxmox.png') }}'
 
-//document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/{{background}}') }}'
-
-//const body = document.querySelector("body");
-//body.style.background = "#44499";
 //Manual overide for setting the search engine
 //localStorage.setItem("search", "google");
 var search = localStorage.getItem("search");
