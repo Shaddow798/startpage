@@ -1,11 +1,16 @@
 // This script controls the startpage on the site.
 
+document.getElementById("searchtext").focus();
+
+
 // Set the background colour
-backgroundcolour = localStorage.getItem("colour")
-document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
+// backgroundcolour = localStorage.getItem("colour")
+// document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
 
 // document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/proxmox.png') }}'
-// document.getElementsByTagName('body')[0].style = 'background-image: /iamges/proxmox.png'
+ document.getElementsByTagName('body')[0].style = 'background-image: /images/proxmox.png';
+
+
 //Manual overide for setting the search engine
 //localStorage.setItem("search", "google");
 var search = localStorage.getItem("search");

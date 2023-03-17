@@ -4,9 +4,15 @@ function setsearch() {
     localStorage.setItem("search", searchvalue);
     alert("Your setting has been applied sucsesfully")
 }
+
+localStorage.setItem("backgroundtype", "solid")
+
+
 function backgroundcolor() {
     color = document.getElementById("")
 }
+
+
 
 
 let colourpicker;
