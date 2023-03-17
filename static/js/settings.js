@@ -1,3 +1,4 @@
+// Function to set the searh engine
 function setsearch() {
     search = document.getElementById("searchengine"),
     searchvalue = search.value;
@@ -7,11 +8,12 @@ function setsearch() {
 
 localStorage.setItem("backgroundtype", "solid")
 
+// All this code is used to setup the colour picker
+
 
 function backgroundcolor() {
     color = document.getElementById("")
 }
-
 
 
 
