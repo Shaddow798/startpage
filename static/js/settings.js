@@ -15,8 +15,6 @@ function backgroundcolor() {
     color = document.getElementById("")
 }
 
-
-
 let colourpicker;
 const defaultColor = "#000000";
 
