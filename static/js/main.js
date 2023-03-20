@@ -4,8 +4,8 @@ document.getElementById("searchtext").focus();
 
 
 // Set the background colour
-backgroundcolour = localStorage.getItem("colour")
-document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
+// backgroundcolour = localStorage.getItem("colour")
+// document.getElementsByTagName('body')[0].style = 'background: ' + backgroundcolour;
 
 // document.getElementsByTagName('body')[0].style = 'background-image: {{ url_for('static', filename='images/proxmox.png') }}'
 // document.getElementsByTagName('body')[0].style = 'background-image: /images/proxmox.png';
