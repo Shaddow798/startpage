@@ -92,4 +92,4 @@ def internal_error(error):
 # All this does it run it aslong as its not being imported
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
