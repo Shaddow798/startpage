@@ -6,6 +6,8 @@ function setsearch() {
     alert("Your setting has been applied sucsesfully")
 }
 
+localStorage.setItem("font-colour", "#333")
+
 localStorage.setItem("backgroundtype", "solid")
 
 // All this code is used to setup the colour picker

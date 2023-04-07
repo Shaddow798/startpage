@@ -2,6 +2,8 @@
 
 document.getElementById("searchtext").focus();
 
+localStorage.setItem("font-colour", "#333")
+
 
 // Set the background colour
 // backgroundcolour = localStorage.getItem("colour")
