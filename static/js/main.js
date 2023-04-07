@@ -2,7 +2,9 @@
 
 document.getElementById("searchtext").focus();
 
-localStorage.setItem("font-colour", "#333")
+
+fontcolour = localStorage.getItem("font-colour")
+document.getElementsByTagName('body')[0].style = 'color: ' + fontcolour;
 
 
 // Set the background colour
